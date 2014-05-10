@@ -7,8 +7,18 @@ gem 'rails', '4.1.1'
 group :development do
 # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-
 end
+
+group :doc do
+  gem 'sdoc', '~>0.4.0'      
+end
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
+
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -24,9 +34,6 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-group :doc do
-  gem 'sdoc', '~> 0.4.0',         
-end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -35,10 +42,6 @@ end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
-end
 
 
 
